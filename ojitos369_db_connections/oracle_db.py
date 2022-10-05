@@ -38,7 +38,7 @@ class ConexionOracle:
             #print(self.cursor.statement)
             return True
         except Exception as e:
-            # ex = Exception(f'''{print_line_center('error: ' + str(e))}{print_line_center('query: ' + str(self.query))}{print_line_center('params: ' + str(self.parametros))}''')
+            # ex = Exception(f'''{print_line_center('error: \n' + str(e))}{print_line_center('query: \n' + str(self.query))}{print_line_center('params: \n' + str(self.parametros))}''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -63,7 +63,7 @@ class ConexionOracle:
                     raise Exception('Parametros: tipo no valido')
                 return True
         except Exception as e:
-            # ex = Exception(f'''{print_line_center('error: ' + str(e))}{print_line_center('query: ' + str(self.query))}{print_line_center('params: ' + str(self.parametros))}''')
+            # ex = Exception(f'''{print_line_center('error: \n' + str(e))}{print_line_center('query: \n' + str(self.query))}{print_line_center('params: \n' + str(self.parametros))}''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -75,7 +75,7 @@ class ConexionOracle:
             self.db_conn.commit()
             return True
         except Exception as e:
-            # ex = Exception(f'''{print_line_center('error: ' + str(e))}{print_line_center('query: ' + str(self.query))}{print_line_center('params: ' + str(self.parametros))}''')
+            # ex = Exception(f'''{print_line_center('error: \n' + str(e))}{print_line_center('query: \n' + str(self.query))}{print_line_center('params: \n' + str(self.parametros))}''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -125,7 +125,7 @@ class ConexionOracle:
                 'pagina': pagina,
             }
         except Exception as e:
-            # ex = Exception(f'''{print_line_center('error: ' + str(e))}{print_line_center('query: ' + str(self.query))}{print_line_center('params: ' + str(self.parametros))}''')
+            # ex = Exception(f'''{print_line_center('error: \n' + str(e))}{print_line_center('query: \n' + str(self.query))}{print_line_center('params: \n' + str(self.parametros))}''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
