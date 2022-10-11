@@ -38,7 +38,7 @@ class ConexionOracle:
             #print(self.cursor.statement)
             return True
         except Exception as e:
-            # ex = Exception(f'''\n\n\nerror: \n'{str(e)}\n\n\n\n\n\nquery: \n'{str(self.query)}\n\n\n\n\n\nparams: \n'{str(self.parametros)}\n\n\n''')
+            # ex = Exception(f'''\n\n\nerror:\n{str(e)}\n\n\n\n\n\nquery:\n{str(self.query)}\n\n\n\n\n\nparams:\n{str(self.parametros)}\n\n\n''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -63,7 +63,7 @@ class ConexionOracle:
                     raise Exception('Parametros: tipo no valido')
                 return True
         except Exception as e:
-            # ex = Exception(f'''\n\n\nerror: \n'{str(e)}\n\n\n\n\n\nquery: \n'{str(self.query)}\n\n\n\n\n\nparams: \n'{str(self.parametros)}\n\n\n''')
+            # ex = Exception(f'''\n\n\nerror:\n{str(e)}\n\n\n\n\n\nquery:\n{str(self.query)}\n\n\n\n\n\nparams:\n{str(self.parametros)}\n\n\n''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -75,7 +75,7 @@ class ConexionOracle:
             self.db_conn.commit()
             return True
         except Exception as e:
-            # ex = Exception(f'''\n\n\nerror: \n'{str(e)}\n\n\n\n\n\nquery: \n'{str(self.query)}\n\n\n\n\n\nparams: \n'{str(self.parametros)}\n\n\n''')
+            # ex = Exception(f'''\n\n\nerror:\n{str(e)}\n\n\n\n\n\nquery:\n{str(self.query)}\n\n\n\n\n\nparams:\n{str(self.parametros)}\n\n\n''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)
@@ -125,7 +125,7 @@ class ConexionOracle:
                 'pagina': pagina,
             }
         except Exception as e:
-            # ex = Exception(f'''\n\n\nerror: \n'{str(e)}\n\n\n\n\n\nquery: \n'{str(self.query)}\n\n\n\n\n\nparams: \n'{str(self.parametros)}\n\n\n''')
+            # ex = Exception(f'''\n\n\nerror:\n{str(e)}\n\n\n\n\n\nquery:\n{str(self.query)}\n\n\n\n\n\nparams:\n{str(self.parametros)}\n\n\n''')
             # print(str(ex))
             # show_error(ex, send_email = True)
             print(e)

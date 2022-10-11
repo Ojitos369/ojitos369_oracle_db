@@ -7,7 +7,7 @@
 
 ```py
 
-from ojitos369_db_connections.oracle_db import ConexionOracle
+from ojitos369_oracle_db.oracle_db import ConexionOracle
 
 db_data = {
     'user': 'your_db_user',

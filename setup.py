@@ -2,8 +2,8 @@ from setuptools import setup
  
 # download_url='https://github.com/RDCH106/parallel_foreach_submodule/archive/v0.1.tar.gz', # Te lo explico a continuación
 setup(
-    name='ojitos369_db_connections',
-    packages=['ojitos369_db_connections'], # Mismo nombre que en la estructura de carpetas de arriba
+    name='ojitos369_oracle_db',
+    packages=['ojitos369_oracle_db'], # Mismo nombre que en la estructura de carpetas de arriba
     include_package_data=True,
     version='0.1',
     license='LGPL v3', # La licencia que tenga tu paquete
