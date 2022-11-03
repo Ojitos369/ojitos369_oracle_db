@@ -4,7 +4,7 @@ import cx_Oracle
 class ConexionOracle:
     def __init__(self, db_data):
         db_conn = cx_Oracle.connect(db_data['user'] + '/' + db_data['password'] + '@' + db_data['host'] + '/' + db_data['scheme'])
-        print('##### Activando DB #####')
+        # print('##### Activando DB #####')
 
         self.cursor = db_conn.cursor()
         self.db_conn = db_conn
