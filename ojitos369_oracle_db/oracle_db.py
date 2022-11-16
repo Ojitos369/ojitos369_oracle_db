@@ -17,6 +17,20 @@ class ConexionOracle:
         else:
             self.cursor.execute(query)
         return self.cursor.fetchall()
+    
+    def ejecutar_funcion(self, funcion, parametros = None):
+        self.query = funcion
+        self.parametros = parametros
+        try:
+            self.cursor.callproc(funcion, parametros)
+            return True
+        except Exception as e:
+            # ex = Exception(f'''\n\n\nerror:\n{str(e)}\n\n\n\n\n\nquery:\n{str(self.query)}\n\n\n\n\n\nparams:\n{str(self.parametros)}\n\n\n''')
+            # print(str(ex))
+            # show_error(ex, send_email = True)
+            print(e)
+            self.db_conn.rollback()
+            return False
 
     def consulta_asociativa(self, query, params=None):
         self.query = query
