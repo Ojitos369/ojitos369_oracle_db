@@ -172,3 +172,9 @@ class ConexionOracle:
         self.raise_error = False
         return True
 
+    def __del__(self):
+        try:
+            self.close()
+        except:
+            pass
+        return True
