@@ -13,6 +13,7 @@ class ConexionOracle:
         self.ce = None
         self.send_error = False
         self.raise_error = False
+        self.closed = False
 
         for k in kwargs:
             setattr(self, k, kwargs[k])
@@ -141,7 +142,10 @@ class ConexionOracle:
         return True
     
     def close(self):
-        self.db_conn.close()
+        if not self.closed:
+            self.cursor.close()
+            self.db_conn.close()
+            self.closed = True
         return True
     
     def set_ce(self, ce):
