@@ -1,6 +1,7 @@
 import math
 from ojitos369.utils import print_line_center as plc
 import cx_Oracle
+import pandas as pd
 
 class ConexionOracle:
     def __init__(self, db_data, **kwargs):
@@ -49,7 +50,8 @@ class ConexionOracle:
             self.cursor.execute(query, params)
         else:
             self.cursor.execute(query)
-        return self.cursor.fetchall()
+        r = self.cursor.fetchall()
+        return pd.DataFrame(r)
 
     @local_base
     def ejecutar_funcion(self, query, params=None):
@@ -67,8 +69,10 @@ class ConexionOracle:
         else:
             self.cursor.execute(query)
         descripcion = [d[0].lower() for d in self.cursor.description]
-        resultado = [dict(zip(descripcion, linea)) for linea in self.cursor]
-        return resultado
+        r = pd.DataFrame(self.cursor.fetchall(), columns=descripcion)
+        return r
+        # resultado = [dict(zip(descripcion, linea)) for linea in self.cursor]
+        # return resultado
 
     @local_base
     def preparar_transaccion(self, query):
