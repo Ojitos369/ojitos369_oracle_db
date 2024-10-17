@@ -5,7 +5,7 @@ setup(
     name='ojitos369_oracle_db',
     packages=['ojitos369_oracle_db'], # Mismo nombre que en la estructura de carpetas de arriba
     include_package_data=True,
-    version='2.0',
+    version='2.1',
     license='LGPL v3', # La licencia que tenga tu paquete
     description='Funciones con conexiones a bases de datos',
     long_description='Funciones de utilidades de ojitos369\nRevizar README en:\nhttps://github.com/Ojitos369/ojitos369-pip',
@@ -29,6 +29,6 @@ setup(
 )
 """
 # pip install setuptools twine
-py3 setup.py sdist
+py setup.py sdist
 twine upload dist/*
 """
