@@ -158,12 +158,12 @@ class ConexionOracle:
 
     @local_base
     def validate_params(self, params):
-        if not params:
+        if type(params) == pd.DataFrame:
+            return params.to_dict(orient="records")
+        elif not params:
             return params
         if type(params) in (dict, set, list, tuple):
             return params
-        elif type(params) == pd.DataFrame:
-            return params.to_dict(orient="records")
         elif type(params) == pd.Series:
             return params.to_dict()
         else:
