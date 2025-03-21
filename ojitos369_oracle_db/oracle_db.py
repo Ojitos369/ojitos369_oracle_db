@@ -5,7 +5,7 @@ import pandas as pd
 
 class ConexionOracle:
     def __init__(self, db_data, **kwargs):
-        db_conn = cx_Oracle.connect(db_data["user"] + "/" + db_data["password"] + "@" + db_data["host"] + "/" + db_data["scheme"])
+        db_conn = cx_Oracle.connect(db_data["user"] + "/" + db_data["password"] + "@" + db_data["host"] + "/" + db_data["scheme"], encoding="UTF-8")
         # print("##### Activando DB #####")
 
         self.cursor = db_conn.cursor()
